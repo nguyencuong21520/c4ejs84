@@ -1,0 +1,11 @@
+.a{
+    height: 300px;
+    width: 50%;
+    background-color:#FFFFFF ;
+}
+.b{
+    height: 300px;
+    float: left;
+    width: 50%;
+    background-color:#F8F8F8 ;
+}
