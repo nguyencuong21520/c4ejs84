@@ -53,57 +53,6 @@
          <td><input type="button" value="*" onclick="setOperrator('*')"/> </td> 
       </tr> 
    </table> 
-   <script> 
-   let temp_result = "";
-   let operator = ""
-    function dis(val) 
-    { 
-        let result = document.getElementById("result")
-        if(result.value === "+" || result.value === "-" || result.value === "*" || result.value === "/"){
-            result.value = ""
-        }
-       result.value += val;
-    }  
-    function setOperrator(user_operator) {
-        temp_result = document.getElementById("result").value; 
-        operator = user_operator
-        document.getElementById("result").value = operator
-    }
-    function solve() 
-    { 
-       let second_input = document.getElementById("result").value 
-       console.log(temp_result, second_input, operator)
-       if(operator === "+")
-       {
-        temp_result = parseFloat(temp_result)
-        temp_result += parseFloat(second_input)
-        document.getElementById("result").value = temp_result
-       }
-       if(operator === "*")
-       {
-        temp_result = parseFloat(temp_result)
-        temp_result *= parseFloat(second_input)
-        document.getElementById("result").value = temp_result
-       }
-       if(operator === "-")
-       {
-        temp_result = parseFloat(temp_result)
-        temp_result -= parseFloat(second_input)
-        document.getElementById("result").value = temp_result
-       }
-       if(operator === "/")
-       {
-        temp_result = parseFloat(temp_result)
-        temp_result /= parseFloat(second_input)
-        document.getElementById("result").value = temp_result
-       }
-       operator =""
-    }  
-    function clr() 
-    { 
-       document.getElementById("result").value = "" 
-    } 
- </script> 
 </body> 
 </html> 
 
