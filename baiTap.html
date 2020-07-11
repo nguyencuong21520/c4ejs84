@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="nhap()">Nhập thông tin</button>
+    <button onclick="xuat()">Xuất thông tin</button>
+    <div id="list">
+
+    </div>
+
+    <script>
+        let viecCanLam = []
+        let list = document.getElementById('list')
+        function nhap(){
+            let congViec = prompt("Hãy Nhập việc cần làm: ")
+            viecCanLam.push(congViec)
+        }
+        function xuat(){
+            for(let i = 0; i<viecCanLam.length; i++){
+                let theH1 = document.createElement('h1')
+                theH1.innerHTML = viecCanLam[i]
+                list.appendChild(theH1)
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="input()">Nhập</button>
+    <button onclick="inRaManHinh()">Xuất</button>
+    <div id="list">
+    </div>
+
+    <script>
+        let listTuVung = []
+
+        function input() {
+            let a = prompt("Hãy nhập: ")
+            listTuVung.push(a)
+        }
+
+        function inRaManHinh() {
+            let HaiNam = document.getElementById('list')
+            let pVuaTao = document.createElement('p')
+            pVuaTao.innerHTML = listTuVung
+            HaiNam.appendChild(pVuaTao)
+        }
+    </script>
+</body>
+
+</html>
